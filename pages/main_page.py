@@ -9,7 +9,7 @@ class MainPage(BasePage):
 
 
     def should_be_login_link(self):
-        login_links = self.browser.find_element(By.CSS_SELECTOR, "#login_link_invalid")
+        assert self.is_element_present(By.CSS_SELECTOR, "#login_link_invalid"), "Login link is not presented"
         login_links.click()
 
 
